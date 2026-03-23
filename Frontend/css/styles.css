@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0a0e17;
+    color: #e0e6ed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-header {
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.logo h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #00f2fe;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.6);
+    margin: 0;
+}
+
+.logo p {
+    color: #8892b0;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.dashboard-container {
+    display: flex;
+    flex: 1;
+    gap: 30px;
+    padding: 0 40px 40px 40px;
+    overflow: hidden;
+}
+
+.panel-registro {
+    width: 420px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.panel-lista {
+    flex: 1;
+    background: rgba(16, 22, 36, 0.4);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 213, 0.1);
+    padding: 30px;
+    overflow-y: auto;
+}
+
+main {
+    width: 100%;
+    background: rgba(16, 22, 36, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 255, 213, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 213, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe, #00f2fe);
+    animation: glow-bar 3s linear infinite;
+}
+
+@keyframes glow-bar {
+    0% {
+        background-position: -480px;
+    }
+
+    100% {
+        background-position: 480px;
+    }
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.titulo-plantilla {
+    color: #00f2fe;
+    text-align: left;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #8892b0;
+    text-transform: uppercase;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #141b2d;
+    border: 1px solid rgba(136, 146, 176, 0.3);
+    border-radius: 4px;
+    color: #e0e6ed;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00f2fe;
+    background-color: #1a233a;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+button#btn-registrar {
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    color: #00f2fe;
+    border: 2px solid #00f2fe;
+    border-radius: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+}
+
+button#btn-registrar:hover {
+    background-color: #00f2fe;
+    color: #0a0e17;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.7);
+}
+
+
+.grid-jugadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background: rgba(20, 27, 45, 0.9);
+    border-left: 4px solid #00f2fe;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    background: rgba(26, 35, 58, 1);
+}
+
+.player-card h3 {
+    color: #00f2fe;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.player-card p {
+    font-size: 0.85rem;
+    color: #8892b0;
+    margin-bottom: 4px;
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-editar,
+.btn-eliminar {
+    flex: 1;
+    padding: 8px;
+    font-size: 0.75rem;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-editar {
+    border: 1px solid #ff9f43;
+    color: #ff9f43;
+}
+
+.btn-editar:hover {
+    background: #ff9f43;
+    color: #0a0e17;
+}
+
+.btn-eliminar {
+    border: 1px solid #ff4757;
+    color: #ff4757;
+}
+
+.btn-eliminar:hover {
+    background: #ff4757;
+    color: #0a0e17;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0e17;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a233a;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00f2fe;
+}

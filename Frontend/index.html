@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiOnce - Registro de Talentos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <h1>⚽ MiOnce</h1>
+            <p>Registro de Jóvenes Talentos</p>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+
+        <aside class="panel-registro">
+            <main>
+                <section id="registro">
+                    <h2>Crea tu Perfil</h2>
+                    <form id="form-registro">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" required placeholder="Ej. Juan">
+                        </div>
+                        <div class="campo">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" required placeholder="Ej. Arango">
+                        </div>
+                        <div class="campo">
+                            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" placeholder="+58 412...">
+                        </div>
+                        <div class="campo">
+                            <label for="correo">Correo Electrónico:</label>
+                            <input type="email" id="correo" required placeholder="tu@email.com">
+                        </div>
+                        <div class="campo">
+                            <label for="direccion">Dirección:</label>
+                            <textarea id="direccion" rows="2" placeholder="Ciudad, Estado..."></textarea>
+                        </div>
+                        <div class="campo">
+                            <label for="posicion">Posición:</label>
+                            <select id="posicion" required>
+                                <option value="Portero">Portero</option>
+                                <option value="Defensa">Defensa</option>
+                                <option value="Mediocampista">Mediocampista</option>
+                                <option value="Delantero">Delantero</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="pie_dominante">Pie Dominante:</label>
+                            <select id="pie_dominante">
+                                <option value="Derecho">Derecho</option>
+                                <option value="Izquierdo">Izquierdo</option>
+                                <option value="Ambidiestro">Ambidiestro</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <div class="campo">
+                                <label for="altura">Altura (m):</label>
+                                <input type="number" value="required" id="altura" step="0.01" placeholder="1.75">
+                            </div>
+                            <div class="campo">
+                                <label for="peso">Peso (kg):</label>
+                                <input type="number" value="required" id="peso" step="0.1" placeholder="70">
+                            </div>
+                        </div>
+                        <button type="submit" id="btn-registrar">Registrar Jugador</button>
+                    </form>
+                    <div id="mensaje-respuesta"></div>
+                </section>
+            </main>
+        </aside>
+
+        <section class="panel-lista">
+            <h2 class="titulo-plantilla">📋 Plantilla Registrada</h2>
+            <div id="contenedor-jugadores" class="grid-jugadores">
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
